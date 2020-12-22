@@ -1,0 +1,38 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-image: url(./alex-foret-Keo9p_ThOvM-unsplash.jpg);
+  background-size: cover;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  width: 350px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 4px 4px 5px 1px rgb(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* .js-clock {
+  width: 350px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 4px 4px 5px 1px rgb(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.js-title {
+  font-size: 60px;
+}
