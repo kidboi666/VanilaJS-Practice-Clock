@@ -1,38 +1,70 @@
 body, html {
   margin: 0;
   padding: 0;
-  background-image: url(./alex-foret-Keo9p_ThOvM-unsplash.jpg);
-  background-size: cover;
 }
 
-main {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 1s linear;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .wrapper {
-  width: 350px;
-  height: 400px;
+  width: 250px;
+  height: 200px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 4px 4px 5px 1px rgb(0, 0, 0, 0.1);
-  display: flex;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
-/* .js-clock {
-  width: 350px;
-  height: 400px;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 4px 4px 5px 1px rgb(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+
 .js-title {
-  font-size: 60px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.js-form input {
+  width: 200px;
+  height: 40px;
+}
+
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+  text-align: center;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+footer form input {
+  width: 250px;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 4px 4px 5px 1px rgb(0, 0, 0, 0.1);
+}
+
+footer ul {
+  color: #fff;
 }
