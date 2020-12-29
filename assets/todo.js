@@ -8,8 +8,8 @@ function deleteToDo(event) { // 버튼 클릭 이벤트에 들어갈 함수
   const btn = event.target; // 매개변수의 target(자기자신)
   const li = btn.parentNode; // 자기자신의 부모노드
   toDoList.removeChild(li); // ul에서 자식 li가 담긴 li 변수 제거
-  const cleanToDos = toDos.filter( // 
-    toDo => toDo.id !== parseInt(li.id) // toDo에 id가
+  const cleanToDos = toDos.filter( // 지우고 남은 리스트를 저장해서 다시 반환
+    toDo => toDo.id !== parseInt(li.id)
     );
   toDos = cleanToDos;
   saveToDos();
@@ -25,7 +25,7 @@ function paintToDo(text) { // 매개변수 text
   const span = document.createElement('span'); // span을 만들고
   const newId = toDos.length + 1; // 할일 배열의 갯수를 하나 더 추가하고
   delBtn.innerText = '❌'; // 버튼에 이모지 할당
-  delBtn.addEventListener('click', deleteToDo); // 버튼에 클릭 이벤트 생성 deleteToDo 함수 호출
+  delBtn.addEventListener('click', deleteToDo);
   span.innerText = text; // span에 매개변수 할당
   li.appendChild(delBtn); //버튼을 li의 자식으로
   li.appendChild(span); // span을 li의 자식으로

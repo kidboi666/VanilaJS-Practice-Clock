@@ -3,6 +3,15 @@ body, html {
   padding: 0;
 }
 
+header {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 80px;
+}
+
 .bgImage {
   position: absolute;
   top: 0;
